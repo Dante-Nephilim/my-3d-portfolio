@@ -32,7 +32,7 @@ export function Hero() {
               <img
                 className="w-full h-32 md:h-40 lg:h-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 alt="hero"
-                src="https://nodejs.org/static/images/logo-hexagon-card.png"
+                src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg"
               />
               <img
                 className="w-full h-32 md:h-40 lg:h-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -50,11 +50,6 @@ export function Hero() {
                 className="w-full h-32 md:h-40 lg:h-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
                 alt="hero"
                 src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/C_Sharp_wordmark.svg/1200px-C_Sharp_wordmark.svg.png"
-              />
-              <img
-                className="w-full h-32 md:h-40 lg:h-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
-                alt="hero"
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/28/C_Sharp_logo.svg/1200px-C_Sharp_logo.svg.png"
               />
             </div>
             <div className="w-full flex gap-3 justify-center ">
