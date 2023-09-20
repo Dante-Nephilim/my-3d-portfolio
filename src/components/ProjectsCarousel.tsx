@@ -64,7 +64,7 @@ export function ProjectsCarousel() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     centerMode: true,
     responsive: [
@@ -94,7 +94,7 @@ export function ProjectsCarousel() {
           {projectList.map((project, index) => (
             <div
               key={index}
-              className="w-72 bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="w-96 bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
               <div className="mb-4">
                 {/* Placeholder SVG; replace with your SVGs */}
@@ -102,7 +102,7 @@ export function ProjectsCarousel() {
                   <img
                     src={project.svgLink}
                     alt={project.name}
-                    className="mx-auto h-20 w-20"
+                    className="mx-auto h-32 w-32"
                   />
                 </div>
               </div>
