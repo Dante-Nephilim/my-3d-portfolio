@@ -45,7 +45,10 @@ export function MainNavBar({
               <a
                 className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
-                  heroRef?.current?.scrollIntoView({ behavior: "smooth" });
+                  heroRef?.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                   const toggle = document.getElementById(
                     "menu-toggle"
                   ) as HTMLInputElement;
@@ -61,7 +64,10 @@ export function MainNavBar({
               <a
                 className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
-                  skillsRef?.current?.scrollIntoView({ behavior: "smooth" });
+                  skillsRef?.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                   const toggle = document.getElementById(
                     "menu-toggle"
                   ) as HTMLInputElement;
@@ -77,7 +83,10 @@ export function MainNavBar({
               <a
                 className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
-                  projectsRef?.current?.scrollIntoView({ behavior: "smooth" });
+                  projectsRef?.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                   const toggle = document.getElementById(
                     "menu-toggle"
                   ) as HTMLInputElement;
@@ -95,6 +104,7 @@ export function MainNavBar({
                 onClick={() => {
                   certificationsRef?.current?.scrollIntoView({
                     behavior: "smooth",
+                    block: "center",
                   });
                   const toggle = document.getElementById(
                     "menu-toggle"
@@ -113,6 +123,7 @@ export function MainNavBar({
                 onClick={() => {
                   experienceRef?.current?.scrollIntoView({
                     behavior: "smooth",
+                    block: "center",
                   });
                   const toggle = document.getElementById(
                     "menu-toggle"
@@ -129,7 +140,10 @@ export function MainNavBar({
               <a
                 className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
-                  contactRef?.current?.scrollIntoView({ behavior: "smooth" });
+                  contactRef?.current?.scrollIntoView({
+                    behavior: "smooth",
+                    block: "center",
+                  });
                   const toggle = document.getElementById(
                     "menu-toggle"
                   ) as HTMLInputElement;
@@ -153,7 +167,10 @@ export function MainNavBar({
                   <a
                     className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"
                     onClick={() =>
-                      heroRef?.current?.scrollIntoView({ behavior: "smooth" })
+                      heroRef?.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
                     }
                   >
                     Home
@@ -163,7 +180,10 @@ export function MainNavBar({
                   <a
                     className="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2"
                     onClick={() =>
-                      skillsRef?.current?.scrollIntoView({ behavior: "smooth" })
+                      skillsRef?.current?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "center",
+                      })
                     }
                   >
                     Skills
@@ -175,6 +195,7 @@ export function MainNavBar({
                     onClick={() =>
                       certificationsRef?.current?.scrollIntoView({
                         behavior: "smooth",
+                        block: "center",
                       })
                     }
                   >
@@ -187,6 +208,7 @@ export function MainNavBar({
                     onClick={() =>
                       projectsRef?.current?.scrollIntoView({
                         behavior: "smooth",
+                        block: "center",
                       })
                     }
                   >
@@ -199,6 +221,7 @@ export function MainNavBar({
                     onClick={() =>
                       experienceRef?.current?.scrollIntoView({
                         behavior: "smooth",
+                        block: "center",
                       })
                     }
                   >
@@ -211,6 +234,7 @@ export function MainNavBar({
                     onClick={() =>
                       contactRef?.current?.scrollIntoView({
                         behavior: "smooth",
+                        block: "center",
                       })
                     }
                   >
