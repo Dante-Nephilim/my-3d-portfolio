@@ -10,7 +10,8 @@ export function Hero() {
             Driven by passion and innovation, I craft seamless digital experiences using cutting-edge technologies. With expertise spanning from frontend to backend, I am well-equipped to transform your visions into reality.
           </p>
           <div className="flex justify-center md:justify-start">
-            <button className="inline-flex text-white bg-blue-500 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm">
+            <button className="inline-flex text-white bg-blue-500 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm"
+            onClick={() => window.open('https://www.linkedin.com/in/prem-sagar-7a838a237/', '_blank')}>
               Connect with Me
             </button>
           </div>
