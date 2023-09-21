@@ -4,8 +4,7 @@ import ScrollMagic from "scrollmagic";
 import diffuseImagePath from "../assets/8081_earthmap2k.jpg";
 import normalImagePath from "../assets/8081_earthlights2k.jpg";
 import roughnessImagePath from "../assets/brown_mud_leaves_01_rough_4k.jpg";
-import moonDiffusePath from "../assets/moonmap4k.jpg"; // Replace with your image path
-// Add more textures for the moon if needed
+import moonDiffusePath from "../assets/moonmap4k.jpg";
 
 export function ScrollDrivenAnimation() {
   const mountRef = useRef<HTMLDivElement>(null);
@@ -43,15 +42,14 @@ export function ScrollDrivenAnimation() {
     const moonDiffuse = new THREE.TextureLoader().load(moonDiffusePath);
     const moonMaterial = new THREE.MeshStandardMaterial({
       map: moonDiffuse,
-      // Add more material properties for the moon if needed
     });
 
-    const moonGeometry = new THREE.SphereGeometry(0.5, 64, 64); // Smaller sphere for the moon
+    const moonGeometry = new THREE.SphereGeometry(0.5, 64, 64);
     const moon = new THREE.Mesh(moonGeometry, moonMaterial);
-    moon.position.set(4, 0, 0); // Set initial position of the moon relative to Earth
+    moon.position.set(4, 0, 0);
     scene.add(moon);
 
-    camera.position.z = 10; // Adjusted to fit both Earth and moon in view
+    camera.position.z = 10;
 
     const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
     scene.add(ambientLight);
@@ -64,13 +62,13 @@ export function ScrollDrivenAnimation() {
     pointLight.position.set(-2, 2, 2);
     scene.add(pointLight);
 
-    let moonAngle = 0; // Initialize angle for moon's orbit
+    let moonAngle = 0;
 
     const animate = () => {
       requestAnimationFrame(animate);
       sphere.rotation.y += 0.01;
 
-      moonAngle += 0.02; // Adjust this for faster/slower moon rotation
+      moonAngle += 0.02;
       moon.position.x = 4 * Math.cos(moonAngle);
       moon.position.z = 4 * Math.sin(moonAngle);
 
@@ -83,7 +81,6 @@ export function ScrollDrivenAnimation() {
     const updateSphereRotation = (progress: number) => {
       const angle = progress * Math.PI * 2;
       sphere.rotation.y = angle;
-      // Optionally, adjust moon rotation on scroll as well
     };
 
     new ScrollMagic.Scene({
