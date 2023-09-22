@@ -56,6 +56,7 @@ export function ScrollDrivenAnimation() {
 
     let isDragging = false;
     let lastX: number;
+    let rotationSpeed = 0;
     let moonAngle = 0;
 
     domElement.addEventListener("mousedown", (e) => {
@@ -71,9 +72,10 @@ export function ScrollDrivenAnimation() {
       if (isDragging) {
         const deltaX = e.clientX - lastX;
         lastX = e.clientX;
-        sphere.rotation.y += deltaX * 0.01;
+        rotationSpeed = deltaX * 0.01;
       }
     });
+
     const updateSize = () => {
       if (domElement) {
         const width = domElement.clientWidth;
@@ -86,6 +88,7 @@ export function ScrollDrivenAnimation() {
 
     window.addEventListener("resize", updateSize);
     updateSize();
+
     const animate = () => {
       requestAnimationFrame(animate);
 
@@ -93,8 +96,16 @@ export function ScrollDrivenAnimation() {
       moon.position.x = 6 * Math.cos(moonAngle);
       moon.position.z = 6 * Math.sin(moonAngle);
 
+      sphere.rotation.y += rotationSpeed;
+      rotationSpeed *= 0.95;
+
+      if (Math.abs(rotationSpeed) < 0.0001) {
+        rotationSpeed = 0;
+      }
+
       renderer.render(scene, camera);
     };
+
     animate();
 
     return () => {
