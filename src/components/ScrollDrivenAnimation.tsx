@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 import * as THREE from "three";
-import ScrollMagic from "scrollmagic";
 import diffuseImagePath from "../assets/8081_earthmap2k.jpg";
 import normalImagePath from "../assets/8081_earthlights2k.jpg";
 import roughnessImagePath from "../assets/brown_mud_leaves_01_rough_4k.jpg";
@@ -20,8 +19,6 @@ export function ScrollDrivenAnimation() {
     const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
     renderer.setPixelRatio(window.devicePixelRatio);
     renderer.setSize(1920, 1080);
-    renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
     domElement.appendChild(renderer.domElement);
 
     const diffuseTexture = new THREE.TextureLoader().load(diffuseImagePath);
@@ -34,8 +31,7 @@ export function ScrollDrivenAnimation() {
       roughnessMap: roughnessTexture,
     });
 
-    const geometry = new THREE.SphereGeometry(3, 128, 128);
-
+    const geometry = new THREE.SphereGeometry(4, 128, 128);
     const sphere = new THREE.Mesh(geometry, material);
     scene.add(sphere);
 
@@ -46,7 +42,7 @@ export function ScrollDrivenAnimation() {
 
     const moonGeometry = new THREE.SphereGeometry(0.5, 64, 64);
     const moon = new THREE.Mesh(moonGeometry, moonMaterial);
-    moon.position.set(4, 0, 0);
+    moon.position.set(6, 0, 0);
     scene.add(moon);
 
     camera.position.z = 10;
@@ -58,48 +54,54 @@ export function ScrollDrivenAnimation() {
     directionalLight.position.set(0, 2, 2);
     scene.add(directionalLight);
 
-    const pointLight = new THREE.PointLight(0xff0000, 0.6, 100);
-    pointLight.position.set(-2, 2, 2);
-    scene.add(pointLight);
-
+    let isDragging = false;
+    let lastX: number;
     let moonAngle = 0;
 
+    domElement.addEventListener("mousedown", (e) => {
+      isDragging = true;
+      lastX = e.clientX;
+    });
+
+    window.addEventListener("mouseup", () => {
+      isDragging = false;
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (isDragging) {
+        const deltaX = e.clientX - lastX;
+        lastX = e.clientX;
+        sphere.rotation.y += deltaX * 0.01;
+      }
+    });
+    const updateSize = () => {
+      if (domElement) {
+        const width = domElement.clientWidth;
+        const height = domElement.clientHeight / 2;
+        renderer.setSize(width, height);
+        camera.aspect = width / height;
+        camera.updateProjectionMatrix();
+      }
+    };
+
+    window.addEventListener("resize", updateSize);
+    updateSize();
     const animate = () => {
       requestAnimationFrame(animate);
-      sphere.rotation.y += 0.01;
 
       moonAngle += 0.02;
-      moon.position.x = 4 * Math.cos(moonAngle);
-      moon.position.z = 4 * Math.sin(moonAngle);
+      moon.position.x = 6 * Math.cos(moonAngle);
+      moon.position.z = 6 * Math.sin(moonAngle);
 
       renderer.render(scene, camera);
     };
     animate();
 
-    const controller = new ScrollMagic.Controller();
-
-    const updateSphereRotation = (progress: number) => {
-      const angle = progress * Math.PI * 2;
-      sphere.rotation.y = angle;
-    };
-
-    new ScrollMagic.Scene({
-      duration: 1000,
-      triggerElement: domElement,
-      triggerHook: "onCenter",
-    })
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .on("progress", (event: any) => {
-        updateSphereRotation(event.progress);
-      })
-      .addTo(controller);
-
     return () => {
       domElement.removeChild(renderer.domElement);
+      window.removeEventListener("resize", updateSize);
     };
   }, []);
 
-  return (
-    <div ref={mountRef} className="fixed top-0 left-0 w-full h-full"></div>
-  );
+  return <div ref={mountRef} className="w-full h-full"></div>;
 }

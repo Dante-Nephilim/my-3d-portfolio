@@ -10,7 +10,6 @@ import { Skills } from "./components/Skills";
 import { Certifications } from "./components/Certifications";
 import { Experience } from "./components/Experience";
 import { Contact } from "./components/Contact";
-import { ScrollDrivenAnimation } from "./components/ScrollDrivenAnimation"; // <-- Make sure to import this!
 
 function App() {
   const heroRef = useRef(null);
@@ -35,10 +34,6 @@ function App() {
       <div className="mt-40 mx-auto max-w-screen-xl" ref={heroRef}>
         <Hero />
       </div>
-      <div className="fixed top-0 left-0 w-full h-full -z-10">
-        <ScrollDrivenAnimation />
-      </div>
-
       <div className="mt-40 mx-auto max-w-screen-xl" ref={projectsRef}>
         <ProjectsCarousel />
       </div>
