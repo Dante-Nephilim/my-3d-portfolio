@@ -22,8 +22,8 @@ function App() {
   return (
     <>
       <div className="fixed top-0 left-0 w-full h-16 z-20 bg-white m-0 p-0">
-        <MainNavBar 
-          heroRef={heroRef} 
+        <MainNavBar
+          heroRef={heroRef}
           projectsRef={projectsRef}
           certificationsRef={certificationsRef}
           experienceRef={experienceRef}
