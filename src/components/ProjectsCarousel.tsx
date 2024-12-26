@@ -1,21 +1,17 @@
 import Slider from "react-slick";
-import FitSetGoImage from "../assets/ft.jpg";
-import ClockImage from "../assets/clock.jpg";
 export function ProjectsCarousel() {
   const projectList = [
     {
-      name: "clock-widget-using-vanilla-js",
+      name: "Clock-widget-using-vanilla-js",
       description: "A clock widget built using vanilla JavaScript and styled using css.",
       language: "JavaScript",
       lastUpdated: "Apr 7, 2022",
-      svgLink: ClockImage,
     },
     {
-      name: "express-jwt",
+      name: "Express-jwt",
       description: "A simple Express.js application that uses JSON Web Tokens (JWT) for authentication.",
       language: "TypeScript",
       lastUpdated: "Nov 9, 2020",
-      svgLink: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Expressjs.png/220px-Expressjs.png",
     },
     {
       name: "Fit-Set-Go",
@@ -23,7 +19,6 @@ export function ProjectsCarousel() {
         "An online platform for fitness enthusiasts to track their workouts and achieve their fitness goals.",
       language: "typescript",
       lastUpdated: "Dec 2023",
-      svgLink: FitSetGoImage,
     },
   ];
 
@@ -31,14 +26,14 @@ export function ProjectsCarousel() {
     dots: true,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
+    slidesToShow: 1,
     slidesToScroll: 1,
     centerMode: true,
     responsive: [
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 2,
+          slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
         },
@@ -63,12 +58,6 @@ export function ProjectsCarousel() {
               key={index}
               className="w-96 h-full bg-gray-50 p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
-              <div className="mb-4">
-                {/* Placeholder SVG; replace with your SVGs */}
-                <div className="mb-4">
-                  <img src={project.svgLink} alt={project.name} className="mx-auto h-32 w-32" />
-                </div>
-              </div>
               <h3 className="text-2xl mb-2 hover:text-blue-600 transition-colors duration-300">{project.name}</h3>
               <p className="italic mb-2 text-gray-600">{project.description}</p>
               <span className="inline-block bg-blue-100 text-blue-500 px-3 py-1 rounded-full text-sm mr-2">
