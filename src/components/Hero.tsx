@@ -1,4 +1,5 @@
 import { ScrollDrivenAnimation } from "./ScrollDrivenAnimation"; // Ensure to import the animation component.
+import PluralSightSkillsIqImage from "../assets/Screenshot_Plural_Sight_Skill_IQ.png";
 
 export function Hero() {
   return (
@@ -12,23 +13,35 @@ export function Hero() {
               Hi, I am Prem Sagar
             </h1>
             <p className="mb-8 leading-relaxed opacity-50">
-              Driven by passion and innovation, I craft seamless digital
-              experiences using cutting-edge technologies. With expertise
-              spanning from frontend to backend, I am well-equipped to transform
-              your visions into reality.
+              Driven by passion and innovation, I craft seamless digital experiences using cutting-edge technologies.
+              With expertise spanning from frontend to backend, I am well-equipped to transform your visions into
+              reality.
             </p>
-            <div className="flex justify-center md:justify-start">
+            <div className="flex justify-center md:justify-start gap-4">
               <button
-                className="inline-flex text-white bg-blue-500 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm"
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/prem-sagar-7a838a237/",
-                    "_blank"
-                  )
-                }
+                className="inline-flex text-white bg-blue-600 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm"
+                onClick={() => window.open("https://www.linkedin.com/in/prem-sagar-7a838a237/", "_blank")}
               >
                 Connect with Me
               </button>
+              <a
+                className="bg-blue-600 text-gray-200 p-2 rounded border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                href="https://github.com/Dante-Nephilim"
+              >
+                GitHub
+              </a>
+              <a
+                className="bg-blue-600 text-gray-200 p-2 rounded hover:bg-blue-500 hover:text-gray-100"
+                href="https://techrez.io/resume/prem-sagar"
+              >
+                Resume
+              </a>
+              <a
+                className="bg-blue-600 text-gray-200 p-2 rounded hover:bg-blue-500 hover:text-gray-100"
+                href="https://app.pluralsight.com/profile/Dante-Nephilim"
+              >
+                PluralSight
+              </a>
             </div>
           </div>
 
@@ -58,7 +71,7 @@ export function Hero() {
           <img
             className="w-32 md:w-40 lg:w-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
             alt="hero"
-            src="https://expressjs.com/images/express-facebook-share.png"
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Expressjs.png/220px-Expressjs.png"
           />
           <img
             className="w-32 md:w-40 lg:w-48 object-contain rounded-xl shadow-md transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-110"
@@ -85,6 +98,11 @@ export function Hero() {
             alt="hero"
             src="https://upload.wikimedia.org/wikipedia/commons/4/46/Touchicon-180.png"
           />
+        </div>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a href="https://app.pluralsight.com/profile/Dante-Nephilim" target="_blank" rel="noopener noreferrer">
+            <img src={PluralSightSkillsIqImage} alt="PluralSight" />
+          </a>
         </div>
       </div>
     </section>
