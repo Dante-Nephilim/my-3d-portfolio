@@ -7,19 +7,26 @@ export function Experience() {
         <h3 className="text-xl font-semibold">Miles Technologies</h3>
         <p className="text-sm text-gray-500">Full Stack Developer</p>
         <ul className="list-disc list-inside mt-2">
-          <li>Trained in React, Node, MongoDB, Express, Angular, C#, .Net, SQL, Firebase, AWS.</li>
-          <li>Worked extensively on the company's tech stack, known as "Breck package".</li>
-          <li>Developed major projects, including building admin dashboards.</li>
-          <li className="text-green-500">Received a raise within 4 months of joining the company.</li>
-          <li className="text-blue-500">Awarded the "Raving Fans" recognition.</li>
+          <li>Single handedly built and deployed Educational Loan Management Web App</li>
+          <li>Worked with google maps based app for a trucks and logistics client</li>
+          <li>Built dynamic multi-step onboarding form for a university management application</li>
+          <li>Developed E-Commerce aﬃliate marketing app</li>
+          <li>Worked with multiple tech stacks as full stack developer</li>
+          <li>Won Raving Fan Award within 7 months of joining</li>
         </ul>
       </div>
 
       <div className="experience-item">
         <h3 className="text-xl font-semibold">NeoFrames - Interior Design Company</h3>
-        <p className="text-sm text-gray-500">Frontend Developer (Freelance)</p>
+        <p className="text-sm text-gray-500">Freelance Frontend Developer</p>
         <ul className="list-disc list-inside mt-2">
-          <li>Developed the company's landing page using Next.js.</li>
+          <li>Upgraded the website from Wordpress to NextJS & TailwindCSS with excellent SEO</li>
+          <li>Built an Interior Customization web app</li>
+          <li>
+            <a rel="noopener noreferrer" href="https://github.com/neoframes/site" target="_blank">
+              https://github.com/neoframes/site
+            </a>
+          </li>
         </ul>
       </div>
     </div>

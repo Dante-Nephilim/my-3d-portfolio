@@ -31,22 +31,22 @@ function App() {
           skillsRef={skillsRef}
         />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={heroRef}>
+      <div className="mt-40" ref={heroRef}>
         <Hero />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={projectsRef}>
+      <div className="mt-40" ref={projectsRef}>
         <ProjectsCarousel />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={certificationsRef}>
+      <div className="mt-40" ref={certificationsRef}>
         <Certifications />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={experienceRef}>
+      <div className="mt-40" ref={experienceRef}>
         <Experience />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={skillsRef}>
+      <div className="mt-40" ref={skillsRef}>
         <Skills />
       </div>
-      <div className="mt-40 mx-auto max-w-screen-xl" ref={contactRef}>
+      <div className="mt-40" ref={contactRef}>
         <Contact />
       </div>
     </>

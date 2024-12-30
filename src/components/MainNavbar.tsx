@@ -19,7 +19,7 @@ export function MainNavBar({
   return (
     <>
       <nav id="header" className="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400 mt-2">
-        <div className="w-full flex items-center justify-between mt-0 px-6 py-2">
+        <div className="w-full flex items-start justify-between mt-0 px-6 py-2">
           <label htmlFor="menu-toggle" className="cursor-pointer md:hidden block">
             <svg
               className="fill-current text-blue-600"
@@ -32,12 +32,12 @@ export function MainNavBar({
               <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
             </svg>
           </label>
-          <input className="hidden" type="checkbox" id="menu-toggle" />
+          <input hidden className="hidden" type="checkbox" id="menu-toggle" />
 
-          <ul className="hidden md:hidden flex-col space-y-4 mt-4 mobile-nav">
+          <ul className="hidden md:hidden flex-col space-y-4 mobile-nav">
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   heroRef?.current?.scrollIntoView({
                     behavior: "smooth",
@@ -54,7 +54,7 @@ export function MainNavBar({
             </li>
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   skillsRef?.current?.scrollIntoView({
                     behavior: "smooth",
@@ -71,7 +71,7 @@ export function MainNavBar({
             </li>
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   projectsRef?.current?.scrollIntoView({
                     behavior: "smooth",
@@ -88,7 +88,7 @@ export function MainNavBar({
             </li>
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   certificationsRef?.current?.scrollIntoView({
                     behavior: "smooth",
@@ -105,7 +105,7 @@ export function MainNavBar({
             </li>
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   experienceRef?.current?.scrollIntoView({
                     behavior: "smooth",
@@ -122,7 +122,7 @@ export function MainNavBar({
             </li>
             <li>
               <a
-                className="text-gray-500 hover:text-blue-600 block no-underline hover:text-black font-medium text-lg py-2 px-4"
+                className="text-gray-500 block no-underline hover:text-black font-medium text-lg py-2 px-4"
                 onClick={() => {
                   contactRef?.current?.scrollIntoView({
                     behavior: "smooth",

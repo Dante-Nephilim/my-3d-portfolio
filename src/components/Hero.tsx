@@ -9,7 +9,7 @@ export function Hero() {
         <div className="flex flex-col md:flex-row items-center mb-16">
           {/* First Column: Text */}
           <div className="w-full md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left mb-8 md:mb-0">
-            <h1 className="title-font tracking-wide sm:text-3xl md:text-6xl xl:text-7xl mb-4 font-bold">
+            <h1 className="title-font tracking-wide text-4xl md:text-8xl xl:text-9xl mb-4 font-bold">
               Hi, I am Prem Sagar
             </h1>
             <p className="mb-8 leading-relaxed opacity-50">
@@ -17,28 +17,36 @@ export function Hero() {
               With expertise spanning from frontend to backend, I am well-equipped to transform your visions into
               reality.
             </p>
-            <div className="flex justify-center md:justify-start gap-4">
-              <button
-                className="inline-flex text-white bg-blue-600 py-2 px-4 focus:outline-none hover:bg-opacity-80 rounded text-sm"
-                onClick={() => window.open("https://www.linkedin.com/in/prem-sagar-7a838a237/", "_blank")}
+            <div className="flex justify-center md:justify-start gap-4 flex-wrap">
+              <a
+                className="bg-blue-600 text-gray-200 p-2 rounded border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
+                href="https://www.linkedin.com/in/prem-sagar-7a838a237/"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Connect with Me
-              </button>
+              </a>
               <a
                 className="bg-blue-600 text-gray-200 p-2 rounded border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
                 href="https://github.com/Dante-Nephilim"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 GitHub
               </a>
               <a
-                className="bg-blue-600 text-gray-200 p-2 rounded hover:bg-blue-500 hover:text-gray-100"
+                className="bg-blue-600 text-gray-200 p-2 rounded border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
                 href="https://techrez.io/resume/prem-sagar"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Resume
               </a>
               <a
-                className="bg-blue-600 text-gray-200 p-2 rounded hover:bg-blue-500 hover:text-gray-100"
+                className="bg-blue-600 text-gray-200 p-2 rounded border border-gray-300 hover:bg-gray-100 hover:text-gray-700"
                 href="https://app.pluralsight.com/profile/Dante-Nephilim"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 PluralSight
               </a>

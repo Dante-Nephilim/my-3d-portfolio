@@ -1,17 +1,20 @@
 export function Skills() {
   const skillList = [
     "React",
+    "Next JS",
     "HTML",
     "CSS",
     "JavaScript",
     "TypeScript",
-    "Git Workflow",
-    "Mongodb",
-    "NodeJs",
-    "ExpressJs",
+    "Git",
+    "MongoDB",
+    "Node JS",
+    "Express JS",
+    "Prisma",
     "C#",
     "SQL",
-    "DOTNET",
+    "PostgreSQL",
+    ".NET",
     "Angular",
     "Ionic",
     "Firebase",
@@ -22,10 +25,7 @@ export function Skills() {
         <h2 className="text-4xl font-bold mb-8">Skills</h2>
         <div className="flex flex-wrap justify-center gap-4">
           {skillList.map((skill, index) => (
-            <span
-              key={index}
-              className="inline-block bg-white p-2 px-4 rounded-full shadow-md text-black"
-            >
+            <span key={index} className="inline-block bg-white p-2 px-4 rounded-full shadow-md text-black">
               {skill}
             </span>
           ))}
